@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" style="-fx-background-color: #BE81F7;" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BE81F7;" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="TOP_LEFT" text="Jolteon" textFill="WHITE">
+                     <font>
+                        <Font name="Malgun Gothic Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_RIGHT" text="Nv 65" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font name="Malgun Gothic Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image requestedHeight="100" requestedWidth="100" url="@../img/jolteon.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Label style="-fx-background-color: #6E6E6E;" text="PS" textFill="#f26a09">
+                     <font>
+                        <Font name="Stencil" size="15.0" />
+                     </font></Label>
+                  <ProgressBar prefWidth="150.0" progress="0.0">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding></ProgressBar>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <image>
+            <Image requestedHeight="100" requestedWidth="100" url="@../img/charizard.png" />
+         </image></ImageView>
+      <ImageView pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <image>
+            <Image requestedHeight="100" requestedWidth="100" url="@../img/vaporeon.png" />
+         </image></ImageView>
+      <ImageView pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <image>
+            <Image requestedHeight="100" requestedWidth="100" url="@../img/blastoise.png" />
+         </image></ImageView>
+      <ImageView pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <image>
+            <Image requestedHeight="100" requestedWidth="100" url="@../img/mewtwo.png" />
+         </image></ImageView>
+      <ImageView pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <image>
+            <Image requestedHeight="100" requestedWidth="100" url="@../img/butterfree.png" />
+         </image></ImageView>
+   </children>
+
+    <columnConstraints>
+        <ColumnConstraints minWidth="100.0" prefWidth="200.0" />
+        <ColumnConstraints minWidth="100.0" prefWidth="200.0" />
+        <ColumnConstraints minWidth="100.0" prefWidth="200.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="100.0" prefHeight="200.0" />
+        <RowConstraints minHeight="100.0" prefHeight="200.0" />
+    </rowConstraints>
+</GridPane>
