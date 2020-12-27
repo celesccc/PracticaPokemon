@@ -15,7 +15,7 @@ public class Main extends Application {
         primaryStage.setTitle("Práctica Pokemon");
         primaryStage.setScene(new Scene(root, 650, 450));
         primaryStage.show();
-        primaryStage.setResizable(false);
+        primaryStage.setResizable(false); // Tamaño de pantalla fijo
     }
 
 

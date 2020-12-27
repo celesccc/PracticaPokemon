@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane alignment="center" hgap="10" style="-fx-background-color: #BE81F7;" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane fx:id="gridPane" alignment="center" hgap="10" style="-fx-background-color: #BE81F7;" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BE81F7;" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+      <VBox fx:id="vbox1" alignment="CENTER" onMouseClicked="#onClickPokemon1" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BE81F7; -fx-border-color: #4B088A; -fx-border-width: 2;" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
          <children>
             <GridPane alignment="CENTER">
               <columnConstraints>
@@ -19,12 +19,12 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label alignment="TOP_LEFT" text="Jolteon" textFill="WHITE" GridPane.columnIndex="0" GridPane.halignment="LEFT">
+                  <Label fx:id="label1Nombre" alignment="TOP_LEFT" textFill="WHITE" GridPane.columnIndex="0" GridPane.halignment="LEFT">
                      <font>
-                        <Font name="Sylfaen" size="18.0" />
+                        <Font name="Sylfaen" size="16.0" />
                      </font>
                   </Label>
-                  <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" text="Nv 65" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                  <Label fx:id="label1Nivel" alignment="TOP_RIGHT" contentDisplay="RIGHT" textAlignment="RIGHT" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
                      <font>
                         <Font name="Sylfaen" size="18.0" />
                      </font>
@@ -34,24 +34,27 @@
                   <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                </padding>
             </GridPane>
-            <ImageView pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="image1" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image requestedHeight="100" requestedWidth="100" url="@../img/jolteon.png" />
                </image>
             </ImageView>
-            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+            <HBox fx:id="hbox1" alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
                <children>
-                  <Label style="-fx-background-color: #6E6E6E;" text="PS" textFill="#f0aa0a">
+                  <Label fx:id="label1PS" style="-fx-background-color: #6E6E6E;" text="PS" textFill="#f0aa0a">
                      <font>
                         <Font name="Tahoma Bold" size="15.0" />
                      </font></Label>
-                  <ProgressBar prefWidth="150.0" progress="1.0" style="-fx-accent: #00FF40;">
+                  <ProgressBar fx:id="progressbar1" prefWidth="150.0" progress="1.0" style="-fx-accent: #00FF40;">
                      <padding>
                         <Insets left="3.0" right="3.0" />
                      </padding></ProgressBar>
                </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
             </HBox>
-            <GridPane alignment="TOP_CENTER">
+            <GridPane fx:id="gridPane1" alignment="TOP_CENTER">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -60,12 +63,12 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="204/204" textFill="WHITE" GridPane.columnIndex="0" GridPane.halignment="LEFT">
+                  <Label fx:id="label1Vida" textFill="WHITE" GridPane.columnIndex="0" GridPane.halignment="LEFT">
                      <font>
                         <Font name="Sylfaen" size="18.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                  <ImageView fx:id="imageSex1" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
                      <image>
                         <Image url="@../img/male.png" />
                      </image></ImageView>
@@ -73,26 +76,16 @@
                <padding>
                   <Insets bottom="10.0" left="30.0" right="30.0" />
                </padding>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
             </GridPane>
          </children>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+         </GridPane.margin>
       </VBox>
-      <ImageView pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-         <image>
-            <Image requestedHeight="100" requestedWidth="100" url="@../img/vaporeon.png" />
-         </image></ImageView>
-      <ImageView pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-         <image>
-            <Image requestedHeight="100" requestedWidth="100" url="@../img/blastoise.png" />
-         </image></ImageView>
-      <ImageView pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-         <image>
-            <Image requestedHeight="100" requestedWidth="100" url="@../img/mewtwo.png" />
-         </image></ImageView>
-      <ImageView pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-         <image>
-            <Image requestedHeight="100" requestedWidth="100" url="@../img/butterfree.png" />
-         </image></ImageView>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+      <VBox fx:id="vbox2" alignment="CENTER" onMouseClicked="#onClickPokemon2" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #4B088A; -fx-border-width: 2; -fx-background-color: #BE81F7;" GridPane.columnIndex="1">
          <children>
             <GridPane alignment="CENTER">
               <columnConstraints>
@@ -103,11 +96,11 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="Charizard" textFill="WHITE" GridPane.columnIndex="0" GridPane.halignment="LEFT">
+                  <Label fx:id="label2Nombre" textFill="WHITE" GridPane.columnIndex="0" GridPane.halignment="LEFT">
                      <font>
-                        <Font name="Sylfaen" size="18.0" />
+                        <Font name="Sylfaen" size="16.0" />
                      </font></Label>
-                  <Label text="Nv 45" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                  <Label fx:id="label2Nivel" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
                      <font>
                         <Font name="Sylfaen" size="18.0" />
                      </font></Label>
@@ -116,25 +109,28 @@
                   <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                </padding>
             </GridPane>
-            <ImageView pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="image2" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image requestedHeight="100" requestedWidth="100" url="@../img/charizard.png" />
                </image>
             </ImageView>
-            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+            <HBox fx:id="hbox2" alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
                <children>
-                  <Label style="-fx-background-color: #6E6E6E;" text="PS" textFill="#f0aa0a">
+                  <Label fx:id="label2PS" style="-fx-background-color: #6E6E6E;" text="PS" textFill="#f0aa0a">
                      <font>
                         <Font name="Tahoma Bold" size="15.0" />
                      </font></Label>
-                  <ProgressBar prefWidth="150.0" progress="1.0" style="-fx-accent: #00FF40;">
+                  <ProgressBar fx:id="progressbar2" prefWidth="150.0" progress="0.79" style="-fx-accent: #00FF40;">
                      <padding>
                         <Insets left="3.0" right="3.0" />
                      </padding>
                   </ProgressBar>
                </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
             </HBox>
-            <GridPane>
+            <GridPane fx:id="gridPane2">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -143,12 +139,12 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="148/148" textFill="WHITE">
+                  <Label fx:id="label2Vida" textFill="WHITE">
                      <font>
                         <Font name="Sylfaen" size="18.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                  <ImageView fx:id="imageSex2" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
                      <image>
                         <Image url="@../img/male.png" />
                      </image></ImageView>
@@ -156,10 +152,16 @@
                <padding>
                   <Insets bottom="10.0" left="30.0" right="30.0" />
                </padding>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
             </GridPane>
          </children>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+         </GridPane.margin>
       </VBox>
-        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+        <VBox fx:id="vbox3" alignment="CENTER" onMouseClicked="#onClickPokemon3" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #4B088A; -fx-border-width: 2; -fx-background-color: #BE81F7;" GridPane.columnIndex="2">
             <children>
                 <GridPane alignment="CENTER">
                     <columnConstraints>
@@ -170,11 +172,11 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Label text="Vaporeon" textFill="WHITE" GridPane.columnIndex="0" GridPane.halignment="LEFT">
+                        <Label fx:id="label3Nombre" textFill="WHITE" GridPane.columnIndex="0" GridPane.halignment="LEFT">
                             <font>
-                                <Font name="Sylfaen" size="18.0" />
+                                <Font name="Sylfaen" size="16.0" />
                             </font></Label>
-                        <Label text="Nv 54" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                        <Label fx:id="label3Nivel" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
                             <font>
                                 <Font name="Sylfaen" size="18.0" />
                             </font></Label>
@@ -183,25 +185,28 @@
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                     </padding>
                 </GridPane>
-                <ImageView pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="image3" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image requestedHeight="100" requestedWidth="100" url="@../img/vaporeon.png" />
                     </image>
                 </ImageView>
-                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+                <HBox fx:id="hbox3" alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
                     <children>
-                        <Label style="-fx-background-color: #6E6E6E;" text="PS" textFill="#f0aa0a">
+                        <Label fx:id="label3PS" style="-fx-background-color: #6E6E6E;" text="PS" textFill="#f0aa0a">
                             <font>
                                 <Font name="Tahoma Bold" size="15.0" />
                             </font></Label>
-                        <ProgressBar prefWidth="150.0" progress="1.0" style="-fx-accent: #00FF40;">
+                        <ProgressBar fx:id="progressbar3" prefWidth="150.0" progress="0.87" style="-fx-accent: #00FF40;">
                             <padding>
                                 <Insets left="3.0" right="3.0" />
                             </padding>
                         </ProgressBar>
                     </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
                 </HBox>
-                <GridPane>
+                <GridPane fx:id="gridPane3">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -210,23 +215,29 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Label text="234/234" textFill="WHITE">
+                        <Label fx:id="label3Vida" textFill="WHITE">
                             <font>
                                 <Font name="Sylfaen" size="18.0" />
                             </font>
                         </Label>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                        <ImageView fx:id="imageSex3" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
                             <image>
-                                <Image url="@../img/male.png" />
+                                <Image url="@../img/female.png" />
                             </image></ImageView>
                     </children>
                     <padding>
                         <Insets bottom="10.0" left="30.0" right="30.0" />
                     </padding>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
                 </GridPane>
             </children>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+         </GridPane.margin>
         </VBox>
-        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <VBox fx:id="vbox4" alignment="CENTER" onMouseClicked="#onClickPokemon4" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BE81F7; -fx-border-color: #4B088A; -fx-border-width: 2;" GridPane.columnIndex="0" GridPane.rowIndex="1">
             <children>
                 <GridPane alignment="CENTER">
                     <columnConstraints>
@@ -237,11 +248,11 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Label text="Blastoise" textFill="WHITE" GridPane.columnIndex="0" GridPane.halignment="LEFT">
+                        <Label fx:id="label4Nombre" textFill="WHITE" GridPane.columnIndex="0" GridPane.halignment="LEFT">
                             <font>
-                                <Font name="Sylfaen" size="18.0" />
+                                <Font name="Sylfaen" size="16.0" />
                             </font></Label>
-                        <Label text="Nv 65" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                        <Label fx:id="label4Nivel" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
                             <font>
                                 <Font name="Sylfaen" size="18.0" />
                             </font></Label>
@@ -250,25 +261,28 @@
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                     </padding>
                 </GridPane>
-                <ImageView pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="image4" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image requestedHeight="100" requestedWidth="100" url="@../img/blastoise.png" />
                     </image>
                 </ImageView>
-                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+                <HBox fx:id="hbox4" alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
                     <children>
-                        <Label style="-fx-background-color: #6E6E6E;" text="PS" textFill="#f0aa0a">
+                        <Label fx:id="label4PS" style="-fx-background-color: #6E6E6E;" text="PS" textFill="#f0aa0a">
                             <font>
                                 <Font name="Tahoma Bold" size="15.0" />
                             </font></Label>
-                        <ProgressBar prefWidth="150.0" progress="1.0" style="-fx-accent: #00FF40;">
+                        <ProgressBar fx:id="progressbar4" prefWidth="150.0" progress="0.44" style="-fx-accent: #00FF40;">
                             <padding>
                                 <Insets left="3.0" right="3.0" />
                             </padding>
                         </ProgressBar>
                     </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
                 </HBox>
-                <GridPane>
+                <GridPane fx:id="gridPane4">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -277,12 +291,12 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Label text="222/222" textFill="WHITE">
+                        <Label fx:id="label4Vida" textFill="WHITE">
                             <font>
                                 <Font name="Sylfaen" size="18.0" />
                             </font>
                         </Label>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                        <ImageView fx:id="imageSex4" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
                             <image>
                                 <Image url="@../img/male.png" />
                             </image></ImageView>
@@ -290,10 +304,16 @@
                     <padding>
                         <Insets bottom="10.0" left="30.0" right="30.0" />
                     </padding>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
                 </GridPane>
             </children>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
         </VBox>
-        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <VBox fx:id="vbox5" alignment="CENTER" onMouseClicked="#onClickPokemon5" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #4B088A; -fx-border-width: 2; -fx-background-color: #BE81F7;" GridPane.columnIndex="1" GridPane.rowIndex="1">
             <children>
                 <GridPane alignment="CENTER">
                     <columnConstraints>
@@ -304,11 +324,11 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Label text="Mewtwo" textFill="WHITE" GridPane.columnIndex="0" GridPane.halignment="LEFT">
+                        <Label fx:id="label5Nombre" textFill="WHITE" GridPane.columnIndex="0" GridPane.halignment="LEFT">
                             <font>
-                                <Font name="Sylfaen" size="18.0" />
+                                <Font name="Sylfaen" size="16.0" />
                             </font></Label>
-                        <Label text="Nv 75" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                        <Label fx:id="label5Nivel" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
                             <font>
                                 <Font name="Sylfaen" size="18.0" />
                             </font></Label>
@@ -317,25 +337,28 @@
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                     </padding>
                 </GridPane>
-                <ImageView pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="image5" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image requestedHeight="100" requestedWidth="100" url="@../img/mewtwo.png" />
                     </image>
                 </ImageView>
-                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+                <HBox fx:id="hbox5" alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
                     <children>
-                        <Label style="-fx-background-color: #6E6E6E;" text="PS" textFill="#f0aa0a">
+                        <Label fx:id="label5PS" style="-fx-background-color: #6E6E6E;" text="PS" textFill="#f0aa0a">
                             <font>
                                 <Font name="Tahoma Bold" size="15.0" />
                             </font></Label>
-                        <ProgressBar prefWidth="150.0" progress="1.0" style="-fx-accent: #00FF40;">
+                        <ProgressBar fx:id="progressbar5" prefWidth="150.0" progress="0.72" style="-fx-accent: #00FF40;">
                             <padding>
                                 <Insets left="3.0" right="3.0" />
                             </padding>
                         </ProgressBar>
                     </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
                 </HBox>
-                <GridPane>
+                <GridPane fx:id="gridPane5">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -344,12 +367,12 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Label text="298/298" textFill="WHITE">
+                        <Label fx:id="label5Vida" textFill="WHITE">
                             <font>
                                 <Font name="Sylfaen" size="18.0" />
                             </font>
                         </Label>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                        <ImageView fx:id="imageSex5" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
                             <image>
                                 <Image url="@../img/male.png" />
                             </image></ImageView>
@@ -357,10 +380,16 @@
                     <padding>
                         <Insets bottom="10.0" left="30.0" right="30.0" />
                     </padding>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
                 </GridPane>
             </children>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
         </VBox>
-        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+        <VBox fx:id="vbox6" alignment="CENTER" onMouseClicked="#onClickPokemon6" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #BE81F7; -fx-border-width: 2; -fx-border-color: #4B088A;" GridPane.columnIndex="2" GridPane.rowIndex="1">
             <children>
                 <GridPane alignment="CENTER">
                     <columnConstraints>
@@ -371,11 +400,11 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Label text="Butterfree" textFill="WHITE" GridPane.columnIndex="0" GridPane.halignment="LEFT">
+                        <Label fx:id="label6Nombre" textFill="WHITE" GridPane.columnIndex="0" GridPane.halignment="LEFT">
                             <font>
-                                <Font name="Sylfaen" size="18.0" />
+                                <Font name="Sylfaen" size="16.0" />
                             </font></Label>
-                        <Label text="Nv 54" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                        <Label fx:id="label6Nivel" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
                             <font>
                                 <Font name="Sylfaen" size="18.0" />
                             </font></Label>
@@ -384,25 +413,28 @@
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                     </padding>
                 </GridPane>
-                <ImageView pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="image6" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image requestedHeight="100" requestedWidth="100" url="@../img/butterfree.png" />
                     </image>
                 </ImageView>
-                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+                <HBox fx:id="hbox6" alignment="CENTER" opacity="0.91" prefHeight="50.0" prefWidth="200.0">
                     <children>
-                        <Label style="-fx-background-color: #6E6E6E;" text="PS" textFill="#f0aa0a">
+                        <Label fx:id="label6PS" style="-fx-background-color: #6E6E6E;" text="PS" textFill="#f0aa0a">
                             <font>
                                 <Font name="Tahoma Bold" size="15.0" />
                             </font></Label>
-                        <ProgressBar prefWidth="150.0" progress="1.0" style="-fx-accent: #00FF40;">
+                        <ProgressBar fx:id="progressbar6" prefWidth="150.0" progress="0.96" style="-fx-accent: #00FF40;">
                             <padding>
                                 <Insets left="3.0" right="3.0" />
                             </padding>
                         </ProgressBar>
                     </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
                 </HBox>
-                <GridPane>
+                <GridPane fx:id="gridPane6">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -411,33 +443,53 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Label text="160/160" textFill="WHITE">
+                        <Label fx:id="label6Vida" textFill="WHITE">
                             <font>
                                 <Font name="Sylfaen" size="18.0" />
                             </font>
                         </Label>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
-                            <image>
-                                <Image url="@../img/male.png" />
-                            </image></ImageView>
+                        <ImageView fx:id="imageSex6" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                     <image>
+                        <Image url="@../img/male.png" />
+                     </image></ImageView>
                     </children>
                     <padding>
                         <Insets bottom="10.0" left="30.0" right="30.0" />
                     </padding>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
                 </GridPane>
             </children>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
         </VBox>
-      <GridPane GridPane.columnSpan="3" GridPane.rowIndex="2">
+      <GridPane alignment="CENTER" minHeight="20.0" prefHeight="20.0" prefWidth="20.0" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="Label" />
+            <Label fx:id="labelPokemon" text="Elegir un Pokémon..." textFill="WHITE">
+               <font>
+                  <Font name="Sylfaen" size="18.0" />
+               </font></Label>
+            <Button fx:id="botonNext" alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" mnemonicParsing="false" onMouseClicked="#onClickNext" style="-fx-background-color: #BE81F7; -fx-border-color: #000000; -fx-border-radius: 5;" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+               <font>
+                  <Font name="Sylfaen" size="18.0" />
+               </font></Button>
+            <Button fx:id="botonExit" disable="true" mnemonicParsing="false" onMouseClicked="#onClickExit" style="-fx-background-color: #BE81F7; -fx-border-radius: 5; -fx-border-color: #000000;" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT">
+               <font>
+                  <Font name="Sylfaen" size="18.0" />
+               </font></Button>
          </children>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
       </GridPane>
    </children>
     <columnConstraints>
@@ -448,6 +500,6 @@
     <rowConstraints>
         <RowConstraints minHeight="100.0" prefHeight="200.0" />
         <RowConstraints minHeight="100.0" prefHeight="200.0" />
-        <RowConstraints minHeight="100.0" prefHeight="200.0" />
+        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="200.0" />
     </rowConstraints>
 </GridPane>
