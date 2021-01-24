@@ -117,30 +117,45 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <GridPane.margin>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
          <children>
-            <Label fx:id="labelTiposAtaque" text="TIPOS DE ATAQUE" visible="false" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+            <Label fx:id="labelTiposAtaque" text="TIPOS DE ATAQUE" textFill="#3b0b2e" visible="false" GridPane.columnSpan="2" GridPane.halignment="CENTER">
                <GridPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </GridPane.margin>
+               <font>
+                  <Font name="Sylfaen" size="16.0" />
+               </font>
             </Label>
-            <Button fx:id="buttonSeguro" mnemonicParsing="false" onMouseClicked="#onClickSeguro" text="Seguro" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+            <Button fx:id="buttonSeguro" mnemonicParsing="false" onMouseClicked="#onClickSeguro" style="-fx-background-color: #E6E6E6; -fx-border-color: #3B0B2E; -fx-border-radius: 5; -fx-border-width: 1; -fx-background-radius: 5; -fx-text-fill: #3B0B2E;" text="Seguro" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </GridPane.margin></Button>
-            <Button fx:id="buttonArriesgado" mnemonicParsing="false" onMouseClicked="#onClickArriesgado" text="Arriesgado" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               </GridPane.margin>
+               <font>
+                  <Font name="Sylfaen" size="12.0" />
+               </font></Button>
+            <Button fx:id="buttonArriesgado" mnemonicParsing="false" onMouseClicked="#onClickArriesgado" style="-fx-background-color: #E6E6E6; -fx-border-color: #3B0B2E; -fx-border-radius: 5; -fx-border-width: 1; -fx-background-radius: 5; -fx-text-fill: #3B0B2E;" text="Arriesgado" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </GridPane.margin></Button>
-            <Button fx:id="buttonMuyArriesg" mnemonicParsing="false" onMouseClicked="#onClickMuyArriesgado" text="Muy Arriesgado" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               </GridPane.margin>
+               <font>
+                  <Font name="Sylfaen" size="12.0" />
+               </font></Button>
+            <Button fx:id="buttonMuyArriesg" mnemonicParsing="false" onMouseClicked="#onClickMuyArriesgado" style="-fx-background-color: #E6E6E6; -fx-border-color: #3B0B2E; -fx-border-radius: 5; -fx-border-width: 1; -fx-background-radius: 5; -fx-text-fill: #3B0B2E;" text="Muy Arriesgado" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </GridPane.margin></Button>
-            <Button fx:id="buttonCancelar" mnemonicParsing="false" onMouseClicked="#onClickCancelar" text="Cancelar" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               </GridPane.margin>
+               <font>
+                  <Font name="Sylfaen" size="12.0" />
+               </font></Button>
+            <Button fx:id="buttonCancelar" mnemonicParsing="false" onMouseClicked="#onClickCancelar" style="-fx-background-color: #E6E6E6; -fx-border-color: #3B0B2E; -fx-border-radius: 5; -fx-border-width: 1; -fx-background-radius: 5; -fx-text-fill: #3B0B2E;" text="Cancelar" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </GridPane.margin></Button>
+               </GridPane.margin>
+               <font>
+                  <Font name="Sylfaen" size="12.0" />
+               </font></Button>
          </children>
       </GridPane>
       <GridPane fx:id="gridOpcion" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -152,14 +167,20 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="buttonAtacar" mnemonicParsing="false" onMouseClicked="#clickOnAtacar" text="ATACAR" GridPane.halignment="CENTER">
+            <Button fx:id="buttonAtacar" mnemonicParsing="false" onMouseClicked="#clickOnAtacar" style="-fx-background-color: #3B0B2E; -fx-border-color: #E6E6E6; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 5; -fx-text-fill: #E6E6E6;" text="ATACAR" GridPane.halignment="CENTER">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding></Button>
-            <Button fx:id="buttonCurar" mnemonicParsing="false" onMouseClicked="#clickOnCurar" text="CURAR" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               </padding>
+               <font>
+                  <Font name="Sylfaen" size="12.0" />
+               </font></Button>
+            <Button fx:id="buttonCurar" mnemonicParsing="false" onMouseClicked="#clickOnCurar" style="-fx-background-color: #3B0B2E; -fx-border-color: #E6E6E6; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 5; -fx-text-fill: #E6E6E6;" text="CURAR" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding></Button>
+               </padding>
+               <font>
+                  <Font name="Sylfaen" size="12.0" />
+               </font></Button>
          </children>
          <GridPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
