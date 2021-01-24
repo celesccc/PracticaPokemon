@@ -173,7 +173,6 @@ public class Ventana1Controller {
     }
 
     // Elección de Pokémon
-    @FXML
     public void pokemonSelected(VBox vbox, Label nombre, Label nivel, Label vida) {
         vbox.setStyle("-fx-background-color: #F5A9F2; -fx-border-color: #DF01D7; -fx-border-width: 2");
         nombre.setTextFill(Color.BLACK);
@@ -184,7 +183,6 @@ public class Ventana1Controller {
     }
 
     // Volver a los valores iniciales cuando ningún Pokémon esté seleccionado
-    @FXML
     public void pokemonNoSelected(VBox vbox, Label nombre, Label nivel, Label vida) {
         vbox.setStyle("-fx-background-color:  #BE81F7; -fx-border-color:  #4B088A; -fx-border-width: 2");
         nombre.setTextFill(Color.WHITE);
@@ -194,7 +192,6 @@ public class Ventana1Controller {
         botonNext.setDisable(true);
     }
 
-    @FXML
     public void quitarSelected() {
         pokemonNoSelected(vbox1, label1Nombre, label1Nivel, label1Vida);
         pokemonNoSelected(vbox2, label2Nombre, label2Nivel, label2Vida);
@@ -205,7 +202,6 @@ public class Ventana1Controller {
     }
 
     // Volver a los valores iniciales al pulsar en Salir
-    @FXML
     public void onClickExit() {
         gridPane.setStyle("-fx-background-color:  #BE81F7");
         pokemonNoSelected(vbox1, label1Nombre, label1Nivel, label1Vida);
